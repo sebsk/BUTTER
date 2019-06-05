@@ -1,0 +1,54 @@
+This repo is modified from the original repo to import pertained text encoder, image encoder and GAN weight. 
+
+Pretrained weights all are stored in "pretrained" folder.
+
+All changes within the existing .py files are marked with # MODIFIED
+
+cfg.py modification:
+
+__C.PRETRAINED_RNN = ''  # MODIFIED: pretrained LSTM, word embedding, vocab path
+__C.PRETRAINED_CNN = ''  # MODIFIED: pretrained CNN_ENCODER path
+__C.PRETRAINED_G = ''  # MODIFIED: pretrained generator path
+
+
+In order to use pretrained weights, these configs need to be specified in config file (yaml).
+
+#########################################TEXT#########################################
+Modified file:
+
+datasets.py
+pretrain_DAMSM.py
+config.py
+main.py
+cfg/DAMSM/coco.yml
+
+
+Explanation:
+In class Textdataset, add argument "pretrained", which is set to "cfg.PRETRAINED_RNN" during DAMSM pre-training (pretrain_DAMSM.py) and main training (main.py) to import existing word embedding wordtoix and ixtoword. All captions are generated from this wordtoix.
+
+In pretrain_DAMSM.py, include option "cfg.PRETRAINED_RNN" to import pretrained LSTM and embedding weights. ONLY SUPPORT LSTM. ONLY SUPPORT COCO DATASET (DAMSM/coco.yml) BECAUSE OF DIMENSION ISSUE.
+
+pretrain_DAMSM.py needs to be run first before running main.py. RNN_ENCODER parameters are fixed after pretrain_DAMSM.py.
+
+########################################IMAGE#########################################
+Modified file:
+
+pretrain_DAMSM.py
+trainer.py
+config.py
+(AND yaml config files)
+miscc.losses.py (add image_ae_generator_loss; also add netsD[I].eval() to save computation in generator_loss)
+
+####ADD NEW FILES####
+image_ae_dataset.py
+image_ae_trainer.py
+image_ae_main.py
+
+Explanation:
+
+In pretrain_DAMSM.py, include option "cfg.PRETRAINED_CNN" to import pretrained CNN_ENCODER. ONLY SUPPORT COCO DATASET BECAUSE OF DIMENSION ISSUE.
+
+In trainer.py, include option "cfg.PRETRAINED_G" and "cfg.PRETRAINED_D" to import pretrained generator and discriminator.
+
+pretrain_DAMSM.py needs to be run first before running main.py. CNN_ENCODER parameters are fixed after pretrain_DAMSM.py.
+
