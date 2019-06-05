@@ -5,4 +5,4 @@ Encoder: AttnGAN's RNN_ENCODER
 
 Decoder: Att2inModel's decoder
 
-There are 2 versions of text autoencoder, one with attention and one without attention.
+There are 2 versions of text autoencoder, one with attention (TAE<sub>attn</sub>)and one without attention (TAE<sub>no attn</sub>).
