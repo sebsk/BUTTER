@@ -14,4 +14,12 @@ The rewiring work is shown in the following two figures.
 
 <img src="Rewiring.png" width="900px" height="500px"/>
 
-<img src="attngan_rewire.png" width="900px" height="350px"/>
+<img src="attngan_rewire.png" width="900px" height="400px"/>
+
+
+Autoencoder       | Description 
+------------ | ---------- 
+ $TAE_{attn}$ | AttnGAN LSTM encoder + Att2in LSTM decoder, with attention
+ $TAE_{no\ attn}$ |  AttnGAN LSTM encoder + Att2in LSTM decoder, without attention 
+ $IAE_{resnet}$ | Att2in Resnet101 feature extractor + AttnGAN GAN
+ $IAE_{attngan}$ |  AttnGAN CNN encoder + AttnGAN GAN, no Att2in involved
