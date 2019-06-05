@@ -19,7 +19,7 @@ The rewiring work is shown in the following two figures.
 
 Autoencoder       | Description 
 ------------ | ---------- 
- $TAE_{attn}$ | AttnGAN LSTM encoder + Att2in LSTM decoder, with attention
- $TAE_{no\ attn}$ |  AttnGAN LSTM encoder + Att2in LSTM decoder, without attention 
- $IAE_{resnet}$ | Att2in Resnet101 feature extractor + AttnGAN GAN
- $IAE_{attngan}$ |  AttnGAN CNN encoder + AttnGAN GAN, no Att2in involved
+ TAE<sub>attn</sub> | AttnGAN LSTM encoder + Att2in LSTM decoder, with attention
+ TAE<sub>no attn</sub> |  AttnGAN LSTM encoder + Att2in LSTM decoder, without attention 
+ IAE<sub>resnet</sub> | Att2in Resnet101 feature extractor + AttnGAN GAN
+ IAE<sub>attngan</sub> |  AttnGAN CNN encoder + AttnGAN GAN, no Att2in involved
