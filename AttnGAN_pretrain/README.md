@@ -16,6 +16,6 @@ In addition, please add the project folder to PYTHONPATH and `pip install` the f
 - `scikit-image`
 
 ## Modification
-`image_ae_*.py` are for image autoencoder pre-training. `image_ae_pretrain.py` is for IAE<sub>resnet<\sub>$ and the rest are for IAE<sub>attngan<\sub>$. The two versions of autoencoder pre-training are introduced in our report.
+`image_ae_*.py` are for image autoencoder pre-training. `image_ae_pretrain.py` is for IAE<sub>resnet<\sub> and the rest are for IAE<sub>attngan<\sub>. The two versions of autoencoder pre-training are introduced in our report.
 
 More details about the modification are included in `changes.txt`.
