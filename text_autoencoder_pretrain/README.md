@@ -4,3 +4,4 @@ Note: Modified from A4 of 2018-19 CS224N at Stanford University, which is heavil
 Encoder: AttnGAN's RNN_ENCODER
 Decoder: Att2inModel's decoder
 
+There are 2 versions of text autoencoder, one with attention and one without attention.
