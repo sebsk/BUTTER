@@ -8,4 +8,5 @@ PyTorch 0.4.1 (along with torchvision)
 
 ## Modification
 LSTM unit cell weights and word embeddings learned from `text_autoencoder_pretrain` are imported as initialized weights for supervised fine-tuning. **ONLY SUPPORT ATT2IN MODEL**
+
 Refer to `changes.txt` for more details.
