@@ -1,0 +1,16 @@
+File changed to include pretrained text decoder weights:
+opts
+train
+
+All changes within these files are marked with # MODIFIED
+
+Explanation:
+ONLY SUPPORT Att2inModel
+
+In opts.py, add new argument:
+    parser.add_argument('--pretrain_rnn', type=str,
+                    help='pretrained embedding weight and lstm weight from text autoencoder pretraining')
+
+In train.py, load model.core weight, model.embed weight, model.logit weight. model.embed and model.logit are modified based on the repo's original wordtoix and ixtoword order.
+
+Pretrained weights are stored in pretrained folder.
