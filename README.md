@@ -10,3 +10,4 @@ The rewiring between the **image captioning model** `Att2in` and **text-to-image
 ### Second Step: Supervised Fine-tuning
 The autoencoders are rewired back to the original models so that the two models are trained separately with labeled data to achieve their respective training goals.
 
+<img src="rewiring.png" width="900px" height="350px"/>
