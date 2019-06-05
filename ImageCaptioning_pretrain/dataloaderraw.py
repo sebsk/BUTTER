@@ -23,7 +23,7 @@ from misc.resnet_utils import myResnet
 import misc.resnet
 
 class DataLoaderRaw():
-    
+
     def __init__(self, opt):
         self.opt = opt
         self.coco_json = opt.get('coco_json', '')
@@ -106,7 +106,8 @@ class DataLoaderRaw():
             if len(img.shape) == 2:
                 img = img[:,:,np.newaxis]
                 img = np.concatenate((img, img, img), axis=2)
-
+                
+            img = img[:, :, :3];
             img = img.astype('float32')/255.0
             img = torch.from_numpy(img.transpose([2, 0, 1])).cuda()
             with torch.no_grad():
