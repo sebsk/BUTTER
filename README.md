@@ -22,5 +22,5 @@ Autoencoder       | Description
 ------------ | ---------- 
  TAE<sub>attn</sub> | AttnGAN LSTM encoder + Att2in LSTM decoder, with attention
  TAE<sub>no attn</sub> |  AttnGAN LSTM encoder + Att2in LSTM decoder, without attention 
- IAE<sub>resnet</sub> | Att2in Resnet101 feature extractor + AttnGAN GAN
+ IAE<sub>resnet</sub> | Att2in Resnet101 feature extractor + AttnGAN generator
  IAE<sub>attngan</sub> |  AttnGAN CNN encoder + AttnGAN GAN, no Att2in involved
