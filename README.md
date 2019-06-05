@@ -17,6 +17,7 @@ The rewiring work is shown in the following two figures.
 <img src="attngan_rewire.png" width="900px" height="400px"/>
 
 The rewired autoencoders used in unsupervised pre-training is described in the following table.
+
 Autoencoder       | Description 
 ------------ | ---------- 
  TAE<sub>attn</sub> | AttnGAN LSTM encoder + Att2in LSTM decoder, with attention
